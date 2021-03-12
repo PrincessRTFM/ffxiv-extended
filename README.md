@@ -1,14 +1,16 @@
 # Setup
 
-This guide is intended to cover the basics of setting up in-game plugins, installing texture mods via Penumbra, and using Concept Matrix to pose for custom screenshots.
+This guide is intended to cover the basics of setting up in-game plugins, and installing texture mods via Penumbra.
 
-There are four main sections:
+There are three main sections:
 - [Setting up XIVLauncher](#xivlauncher)
 - [Getting started with plugins](#plugins)
 - [Importing mods with Penumbra](#penumbra)
-- [Basic use of ConceptMatrix](#conceptmatrix)
 
 At the bottom of this guide is a section on [troubleshooting] for common problems. If you encounter any problems not covered there, it also has links to support discord servers. If you come across a situation you think should be mentioned here, please let me know so I can see about adding it.
+
+The [ConceptMatrix guide] has been moved to its own article, since it's both complex enough and also entirely unrelated to XIVLauncher, plugins, mods, and mod loading.
+
 
 ## XIVLauncher
 
@@ -121,13 +123,9 @@ If you want to share a Penumbra mod, it's arguably easier than a TexTools one. O
 </details>
 
 
-## ConceptMatrix
-
-This part of the guide isn't quite done yet, but I wanted to get the parts about plugins and Penumbra released as soon as I could. Check back soon!
-
 # Troubleshooting
 
-Sometimes, things don't work quite right. Don't worry, this section will cover the basics of troubleshooting. If things still don't work after this, you can always try the [XIVLauncher support discord server] or the [CMTool support discord server], depending on what exactly is broken.
+Sometimes, things don't work quite right. Don't worry, this section will cover the basics of troubleshooting. If things still don't work after this, you can always try the [XIVLauncher support discord server].
 
 ## I don't see the message about Dalamud loading when I log in!
 
@@ -178,10 +176,9 @@ If that doesn't work, then unfortunately your best bet is to import the mod into
 [Troubleshooting]: <#troubleshooting>
 [XIVLauncher]: <https://github.com/goatcorp/FFXIVQuickLauncher/releases/latest> "Latest XIVLauncher release"
 [Penumbra]: <https://github.com/xivdev/Penumbra/releases/latest> "Latest Penumbra release"
-[CMTool]: <https://github.com/imchillin/CMTool/releases/latest> "Latest CMTool release"
 [XIV Mod Archive]: <https://www.xivmodarchive.com/>
 [XIVLauncher support discord server]: <https://discord.gg/3NMcUV5>
-[CMTool support discord server]: <https://discord.com/invite/crystallinemeans>
+[ConceptMatrix guide]: <cmtool.md>
 [recommended plugins]: <plugin-recs.md>
 [Penumbra mod metadata]: <penumbra-metadata.md>
 [XIVLauncher opening screen]: <img/launcher-front.png>
