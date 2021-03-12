@@ -2,6 +2,12 @@
 
 This guide is intended to cover the basics of setting up in-game plugins, installing texture mods via Penumbra, and using Concept Matrix to pose for custom screenshots.
 
+There are four sections:
+- [Setting up XIVLauncher](#xivlauncher)
+- [Getting started with plugins](#plugins)
+- [Importing mods with Penumbra](#penumbra)
+- [Basic use of ConceptMatrix](#conceptmatrix)
+
 ## XIVLauncher
 
 In order to use plugins in FFXIV, you'll first need to be using [XIVLauncher], which is a much improved, faster-to-load game launcher that provides in-game plugins. By itself, the launcher is already more convenient than the official one, so even if you don't want to use any plugins at all, I highly recommend it. If you already have
