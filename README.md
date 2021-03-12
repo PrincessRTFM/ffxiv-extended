@@ -4,12 +4,28 @@ This collection of guides is intended to help beginners with setting up a variet
 
 At the time of this writing, these guides are still being written. However, even once finished, _all_ guides will continue to be updated with reader feedback and changes to the content they cover.
 
+# FAQ
+
 ## Which guide do I want?
 
 - [Setting up XIVLauncher, in-game plugins, and texture mods with Penumbra](/plugins-and-mods.md)
 - [My personal plugin recommendations](/plugin-recs.md)
 - [Penumbra mod metadata and how to edit it](/penumbra-metadata.md)
 - [ConceptMatrix and posing](/cmtool.md)
+
+## Are these things allowed?
+
+That's a bit of a complicated matter. The super-short answer is "no" - third party tools are forbidden by the ToS. That includes plugins, mods, parsers, and anything that affects _or observes_ the game's memory and network communication to the server, like Teamcraft.
+
+The slightly-longer answer is "no, _but_..." - Square Enix has admitted that they don't have the means in place to monitor for such things, and that doing so would actually be a violation of multiple privacy laws. They can't tell if you're doing that kind of thing unless you outright tell them you are.
+
+The full answer, then, is something like this:
+
+> All third-party tools and modifications are against the official ToS, _but_ as long as you don't mention them on official channels or use them to harass (or _enable_ harassment of) other players, not only does SE not know, they also _don't actually care_.
+
+While I wouldn't advise publicly streaming a modded game or the use of plugins, and you should _never_ talk about using third party tools on official channels, it's perfectly safe to use them and discuss them with your friends.
+
+Or even to write a collection of guides on github to help beginners get started with them.
 
 ## I found a mistake/typo/etc!
 
