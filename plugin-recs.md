@@ -106,7 +106,7 @@ Unfortunately, since not everyone uses these tools, sometimes the data ends up o
 
 ### No Kill
 
-> :exclamation: **Requires [plugin repo #3]**
+> :exclamation: **Requires [custom repo #3]**
 
 Very simple and absolutely an install-and-forget plugin. When you launch the game and try to connect to your data centre, the game terminates if that connection fails for any reason. That can be pretty annoying if the issue was only a temporary hiccup in your connection, so this plugin just stops it from doing that. If the game fails to connect to the server, it'll just stay open so you can retry, instead of making you launch it again - which is especially annoying with one-time passwords.
 
@@ -175,7 +175,7 @@ If you do a lot of instances (dungeons, trials, raids, etc) that you use waymark
 
 ### XIVCombo (Expanded)
 
-> :exclamation: **Requires [plugin repo #2]** _(only for the expanded version)_
+> :exclamation: **Requires [custom repo #2]** _(only for the expanded version)_
 
 You probably know about _skill chains_ in XIV - certain skills get _combos_ when used after others, which make them do more damage or add an extra effect. Generally, you want to follow the chain. For example, if you play Machinist, you want to use (heated) split shot, then follow it with (heated) slug shot, then finish the chain with (heated) clean shot. If you use plain Slug Shot _without_ first using (heated) split shot, you do 100 potency of damage. If you follow the chain, you do _260_ potency of damage instead, just with that skill - nevermind what (heated) split shot does first.
 
