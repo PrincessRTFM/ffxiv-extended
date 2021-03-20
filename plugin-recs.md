@@ -187,6 +187,11 @@ There are a fair number of these button-replacement chains that XIVCombo offers,
 
 > :bangbang: **There's an official version of this plugin**, and then _several_ different _unofficial_ versions, ranging from the one I use to one that's about two steps removed from a bot - which I will _not_ be linking here.
 
+### YesAlready
+
+> :exclamation: **Requires [custom repo #2]**
+
+If you've gotten sick of having to tell the game that yes, you really did mean to click that, you're sure, you just want to do the thing, will it shut up and do what you told it to already, then this plugin might just save your sanity. Not only can you select categories of confirmation boxes to auto-confirm, you can even use plain-text _and_ regex matching for all of the popups. The plugin even recognises when there's a confirmation checkbox to be ticked as well as hitting the button, and takes care of that for you too! Finally, you can extract materia from things without the game bugging you for _every single item_ to be _extra_ sure.
 
 
 
