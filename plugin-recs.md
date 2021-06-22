@@ -143,6 +143,10 @@ Finally, you can have gendered dialogue follow your character model's sex (playi
 
 It might sound like you could just use the [_Market Board_](#market-board) plugin, but this one is a little different - and for things like quest rewards, more convenient. You can configure a minimum price threshold, a maximum history period, and a hotkey to trigger the lookup. When you hold that hotkey and hover over an item for a certain (also configurable) amount of time, the plugin looks up that item on Universalis and reports the average price - or, if the price is too low, tells you that you should just sell it to an NPC instead. You can choose whether it should tell you this in chat, in a popup window, or both.
 
+### QoLBar
+
+If you're like me, you never have enough hotbar space for all the things you'd like to put there. Especially if you also like to use custom macros to make slash commands accessible via easy buttons. This plugin will be your saving grace: it lets you define and add new hotbars, positioned anywhere you want, with buttons to run slash commands - and you can even make categories for submenus. Oh, and assign hotkeys too.
+
 ### Simple Tweaks
 
 The title here is a _blatant_ lie, but it's a collection of minor-enough-to-not-need-their-own-plugin tweaks, so... close enough, I suppose? Featuring such QoL improvements as clickable chat links, disabling the title screen's idle movie, and a _wide_ assortment of UI and item-tooltip improvements, not to mention _custom chatbox command aliases_ (pretty convenient with MacroRecursion...!) this plugin does too much to describe, but I promise you'll find some useful things. Possibly my number one favourite, honestly!
