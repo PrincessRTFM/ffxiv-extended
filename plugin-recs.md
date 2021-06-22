@@ -16,7 +16,7 @@ If you do a lot of duty roulettes, you'll love this one. It adds a chatlog messa
 
 <details>
 <summary>Advanced</summary>
-You can also congifure _webhooks_ that this plugin will post messages to for the role/roulette alerts that you enable. In fact, you can even tell it not to do chatlog messages and _only_ do webhooks. The posted message is in the kind of format for a basic discord webhook and can't be changed, so while you can easily have your client post alerts about roulette bonuses to a discord channel if you want, any other (custom) receivers will need to be able to extract the roulette and role from a human-readable message in a string in a JSON object. You might be interested in the [webhook] utility for that if you need a translation layer.
+You can also congifure <i>webhooks</i> that this plugin will post messages to for the role/roulette alerts that you enable. In fact, you can even tell it not to do chatlog messages and <i>only</i> do webhooks. The posted message is in the kind of format for a basic discord webhook and can't be changed, so while you can easily have your client post alerts about roulette bonuses to a discord channel if you want, any other (custom) receivers will need to be able to extract the roulette and role from a human-readable message in a string in a JSON object. You might be interested in the [webhook] utility for that if you need a translation layer.
 </details>
 
 ### Burning Down The House
@@ -35,7 +35,7 @@ This one is mostly useful if you end up with world coordinates _outside_ the gam
 
 <details>
 <summary>Usage</summary>
-The `/coord` command is very lax. It tries _really_ well to extract coordinates from what you write, and can even take a partial map-zone name as well if you're not marking your current area. Basically, looks for the first number (which can include a decimal point) and treats that as the _x_ coordinate, then looks for the second (again, can have a decimal) and uses that as the _y_ coordinate, and then _if_ there's a colon (`:`) after that, everything _past_ the colon is a partial map-zone name to look for and put the flag in. So, for example, you can paste in `/coord x30, y=12.2:dhona` and get a map flag at `(30.0, 12.2)` in Mor Dhona. Or you could say `/coord 10.4 19.5` to put your marker at `(10.4, 19.5)` in whatever map zone you're currently in.
+The <code>/coord</code> command is very lax. It tries <i>really</i> well to extract coordinates from what you write, and can even take a partial map-zone name as well if you're not marking your current area. Basically, looks for the first number (which can include a decimal point) and treats that as the <i>x</i> coordinate, then looks for the second (again, can have a decimal) and uses that as the <i>y</i> coordinate, and then <i>if</i> there's a colon (<code>:</code>) after that, everything <i>past</i> the colon is a partial map-zone name to look for and put the flag in. So, for example, you can paste in <code>/coord x30, y=12.2:dhona</code> and get a map flag at <code>(30.0, 12.2)</code> in Mor Dhona. Or you could say <code>/coord 10.4 19.5</code> to put your marker at <code>(10.4, 19.5)</code> in whatever map zone you're currently in.
 </details>
 
 ### FPS Plugin
@@ -59,42 +59,27 @@ On top of that, it comes with a "fitting room" feature that lets you save outfit
 <details>
 <summary>Filters</summary>
 In addition to searching (technically filtering by item name text) you can also filter items by:
-- Category (the sort of things you can search in on marketboards, only more detailed and you can pick multiple)
-- Equip level (player level needed to equip item, for gear)
-- Item level
-- Rarity
-- Job/sex/race restrictions for gear
-- What job can craft it (or if it's not craftable)
-- What job can desynth it (or if it's not desynthable)
-- What currency it can be bought with, or it it's not buyable
-- Whether it's dyable or not
-- Whether it's "unique" or not
-- Whether it's tradeable or not
-- What stats it affects
+<ul>
+<li>Category (the sort of things you can search in on marketboards, only more detailed and you can pick multiple)</li>
+<li>Equip level (player level needed to equip item, for gear)</li>
+<li>Item level</li>
+<li>Rarity</li>
+<li>Job/sex/race restrictions for gear</li>
+<li>What job can craft it (or if it's not craftable)</li>
+<li>What job can desynth it (or if it's not desynthable)</li>
+<li>What currency it can be bought with, or it it's not buyable</li>
+<li>Whether it's dyable or not</li>
+<li>Whether it's "unique" or not</li>
+<li>Whether it's tradeable or not</li>
+<li>What stats it affects</li>
+</ul>
 </details>
 
-### Macro Recursion
+### Macro Chain
 
-The name is only slightly misleading - it doesn't let you call macros like subroutines or functions, it adds a `/runmacro` command that can be used from _within_ macros (or the chatlog if you want) to run a specific macro. Normally, XIV macros are limited to fifteen lines, including any `/macroicon`, `/macroerror`, etc. This plugin lets you make the last line a `/runmacro` command to immediately jump to another one - or, and this is where the recursion comes in, to call _itself_.
+Macro Chain adds two commands: `/runmacro <macro#> {individual|shared}` and `/nextmacro`. The `/runmacro` command lets you start running a specific macro from the start, but it is NOT usable from WITHIN a macro. If you're wondering what the point of it is then, you might want to look at [_QoLBar_](#qolbar) and [_Simple Tweaks_](#simple-tweaks).
 
-<details>
-<summary>Examples</summary>
-#### Infinite Bread
-```
-/micon "break fast" emote
-/bread <wait.11>
-/bread motion <wait.11>
-/runmacro 25 shared 3
-```
-#### Infinite Riceball
-```
-/micon "eat rice ball" emote
-/riceball <wait.11>
-/riceball motion <wait.11>
-/runmacro 26 shared 3
-```
-> :warning: **You will need to edit the last line** if you intend to copy these examples! In the macro window, select the macro you want to run from the command and look at the lower left corner. You'll see "Macro _[number]_" - that number is the macro ID. Look at the top of the window to see if the macro you want to run is in the _individual_ or _shared_ page. The command is `/runmacro [ID] [page] [optional line number]` - if you provide a line number, the macro will be started from that line, otherwise from the first.
-</details>
+The `/nextmacro` command _only_ works from within a macro, and it immediately jumps to the first line of the _next_ macro. For example, if your macro #1 ends with `/nextmacro`, then executing that macro will also execute macro #2. This lets you make macros longer than 15 lines, technically speaking. For an alternative that's more powerful but also more complex, check out [_Macrology_](#macrology).
 
 ### Market Board
 
@@ -132,7 +117,7 @@ Not actually a commonly-needed one but very cool, and potentially also very comf
 
 <details>
 <summary>Specifics</summary>
-You set the first and last names for your characters (only for NPC speech) and then you have three situations you choose the form of address for. When NPCs or dialogue use your _full_ name, your _first_ name only, or your _last_ name only, you can force it to be replaced with first-then-last, first-only, last-only, or last-then-first. All independently.
+You set the first and last names for your characters (only for NPC speech) and then you have three situations you choose the form of address for. When NPCs or dialogue use your <i>full</i> name, your <i>first</i> name only, or your <i>last</i> name only, you can force it to be replaced with first-then-last, first-only, last-only, or last-then-first. All independently.
 
 Some cultures place the family name first and the individual name last, but the game doesn't have any option to indicate that your name follows that convention. PrefPro lets you force NPCs and dialogue to do that anyway, as well as to use a different name entirely for those replacements.
 
