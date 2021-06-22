@@ -147,10 +147,6 @@ It might sound like you could just use the [_Market Board_](#market-board) plugi
 
 The title here is a _blatant_ lie, but it's a collection of minor-enough-to-not-need-their-own-plugin tweaks, so... close enough, I suppose? Featuring such QoL improvements as clickable chat links, disabling the title screen's idle movie, and a _wide_ assortment of UI and item-tooltip improvements, not to mention _custom chatbox command aliases_ (pretty convenient with MacroRecursion...!) this plugin does too much to describe, but I promise you'll find some useful things. Possibly my number one favourite, honestly!
 
-### Slidecast
-
-A tiny QoL improvement, but it can make a big impact. If you don't know, _slidecasting_ is a game mechaninc wherein you can safely move your character during the _last half-second_ of casting spells and attacks, without cancelling them. It may not sound like a lot, but it can be the difference between getting hit by an enemy and dodging while still successfully attacking. The thing is, you have to get it in the last half-second or you'll waste your cast. This plugin adds a little white line on the casting bar indicating when it's safe to move - once the cast progress reaches that line, you're good to slidecast. The visual display can be much easier to use than watching the number, at least for some people.
-
 ### SoundSetter
 
 A hotkeyable window (and plugin commands) to let you adjust different volume categories (including master volume) without needing the system config window. Not only can you now macro (and therefore hotkey!) volume controls, you can also hotkey the window itself from the plugin directly, which lets you control _all_ aspects of game volume... even in cutscenes, where you can't open the system config window.
