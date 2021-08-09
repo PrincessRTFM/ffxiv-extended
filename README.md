@@ -12,6 +12,9 @@ At the time of this writing, these guides are still being written. However, even
 - [My personal plugin recommendations](/plugin-recs.md)
 - [ConceptMatrix and posing](/cmtool.md)
 
+There's also a new section that's not actually about any third-party tools at all, just things in the game itself that poorly (or, more often, _not_) explained.
+- [Things XIV doesn't tell you](/tips.md)
+
 ## Are these things allowed?
 
 That's a bit of a complicated matter. The super-short answer is "no" - third party tools are forbidden by the ToS. That includes plugins, mods, parsers, and anything that affects _or observes_ the game's memory and network communication to the server, like Teamcraft.
