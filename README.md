@@ -10,7 +10,6 @@ At the time of this writing, these guides are still being written. However, even
 
 - [Setting up XIVLauncher, in-game plugins, and texture mods with Penumbra](/plugins-and-mods.md)
 - [My personal plugin recommendations](/plugin-recs.md)
-- [Penumbra mod metadata and how to edit it](/penumbra-metadata.md)
 - [ConceptMatrix and posing](/cmtool.md)
 
 ## Are these things allowed?
