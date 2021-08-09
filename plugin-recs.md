@@ -16,7 +16,9 @@ If you do a lot of duty roulettes, you'll love this one. It adds a chatlog messa
 
 <details>
 <summary>Advanced</summary>
-You can also congifure <i>webhooks</i> that this plugin will post messages to for the role/roulette alerts that you enable. In fact, you can even tell it not to do chatlog messages and <i>only</i> do webhooks. The posted message is in the kind of format for a basic discord webhook and can't be changed, so while you can easily have your client post alerts about roulette bonuses to a discord channel if you want, any other (custom) receivers will need to be able to extract the roulette and role from a human-readable message in a string in a JSON object. You might be interested in the [webhook] utility for that if you need a translation layer.
+
+You can also congifure _webhooks_ that this plugin will post messages to for the role/roulette alerts that you enable. In fact, you can even tell it not to do chatlog messages and _only_ do webhooks. The posted message is in the kind of format for a basic discord webhook and can't be changed, so while you can easily have your client post alerts about roulette bonuses to a discord channel if you want, any other (custom) receivers will need to be able to extract the roulette and role from a human-readable message in a string in a JSON object. You might be interested in the [webhook] utility for that if you need a translation layer.
+
 </details>
 
 ### Burning Down The House
@@ -35,7 +37,9 @@ This one is mostly useful if you end up with world coordinates _outside_ the gam
 
 <details>
 <summary>Usage</summary>
-The <code>/coord</code> command is very lax. It tries <i>really</i> well to extract coordinates from what you write, and can even take a partial map-zone name as well if you're not marking your current area. Basically, looks for the first number (which can include a decimal point) and treats that as the <i>x</i> coordinate, then looks for the second (again, can have a decimal) and uses that as the <i>y</i> coordinate, and then <i>if</i> there's a colon (<code>:</code>) after that, everything <i>past</i> the colon is a partial map-zone name to look for and put the flag in. So, for example, you can paste in <code>/coord x30, y=12.2:dhona</code> and get a map flag at <code>(30.0, 12.2)</code> in Mor Dhona. Or you could say <code>/coord 10.4 19.5</code> to put your marker at <code>(10.4, 19.5)</code> in whatever map zone you're currently in.
+
+The `/coord` command is very lax. It tries _really_ well to extract coordinates from what you write, and can even take a partial map-zone name as well if you're not marking your current area. Basically, looks for the first number (which can include a decimal point) and treats that as the _x_ coordinate, then looks for the second (again, can have a decimal) and uses that as the _y_ coordinate, and then _if_ there's a colon (`:`) after that, everything _past_ the colon is a partial map-zone name to look for and put the flag in. So, for example, you can paste in `/coord x30, y=12.2:dhona` and get a map flag at `(30.0, 12.2)` in Mor Dhona. Or you could say `/coord 10.4 19.5` to put your marker at `(10.4, 19.5)` in whatever map zone you're currently in.
+
 </details>
 
 ### FPS Plugin
@@ -58,21 +62,21 @@ On top of that, it comes with a "fitting room" feature that lets you save outfit
 
 <details>
 <summary>Filters</summary>
+
 In addition to searching (technically filtering by item name text) you can also filter items by:
-<ul>
-<li>Category (the sort of things you can search in on marketboards, only more detailed and you can pick multiple)</li>
-<li>Equip level (player level needed to equip item, for gear)</li>
-<li>Item level</li>
-<li>Rarity</li>
-<li>Job/sex/race restrictions for gear</li>
-<li>What job can craft it (or if it's not craftable)</li>
-<li>What job can desynth it (or if it's not desynthable)</li>
-<li>What currency it can be bought with, or it it's not buyable</li>
-<li>Whether it's dyable or not</li>
-<li>Whether it's "unique" or not</li>
-<li>Whether it's tradeable or not</li>
-<li>What stats it affects</li>
-</ul>
+- Category (the sort of things you can search in on marketboards, only more detailed and you can pick multiple)
+- Equip level (player level needed to equip item, for gear)
+- Item level
+- Rarity
+- Job/sex/race restrictions for gear
+- What job can craft it (or if it's not craftable)
+- What job can desynth it (or if it's not desynthable)
+- What currency it can be bought with, or it it's not buyable
+- Whether it's dyable or not
+- Whether it's "unique" or not
+- Whether it's tradeable or not
+- What stats it affects
+
 </details>
 
 ### Macro Chain
@@ -117,11 +121,13 @@ Not actually a commonly-needed one but very cool, and potentially also very comf
 
 <details>
 <summary>Specifics</summary>
-You set the first and last names for your characters (only for NPC speech) and then you have three situations you choose the form of address for. When NPCs or dialogue use your <i>full</i> name, your <i>first</i> name only, or your <i>last</i> name only, you can force it to be replaced with first-then-last, first-only, last-only, or last-then-first. All independently.
+
+You set the first and last names for your characters (only for NPC speech) and then you have three situations you choose the form of address for. When NPCs or dialogue use your _full_ name, your _first_ name only, or your _last_ name only, you can force it to be replaced with first-then-last, first-only, last-only, or last-then-first. All independently.
 
 Some cultures place the family name first and the individual name last, but the game doesn't have any option to indicate that your name follows that convention. PrefPro lets you force NPCs and dialogue to do that anyway, as well as to use a different name entirely for those replacements.
 
 Finally, you can have gendered dialogue follow your character model's sex (playing a male gets male gendering, playing a female gets female gendering) or force it to use one or the other regardless. Unfortunately, due to the nature of language and the voice lines, it's outright not possible to get gender-neutral pronouns.
+
 </details>
 
 ### PriceCheck
@@ -160,7 +166,9 @@ If you do a lot of instances (dungeons, trials, raids, etc) that you use waymark
 
 ### XIVCombo (Expanded)
 
-> :exclamation: **Requires [custom repo #2]** _(only for the expanded version)_
+> :exclamation: **Requires [custom repo #2]** _(for the expanded version)_
+
+> :exclamation: **Requires [custom repo #4]** _(for the very expanded version)_
 
 You probably know about _skill chains_ in XIV - certain skills get _combos_ when used after others, which make them do more damage or add an extra effect. Generally, you want to follow the chain. For example, if you play Machinist, you want to use (heated) split shot, then follow it with (heated) slug shot, then finish the chain with (heated) clean shot. If you use plain Slug Shot _without_ first using (heated) split shot, you do 100 potency of damage. If you follow the chain, you do _260_ potency of damage instead, just with that skill - nevermind what (heated) split shot does first.
 
@@ -170,7 +178,7 @@ XIVCombo _condenses_ those skill by having you only place the _end_ skill of the
 
 There are a fair number of these button-replacement chains that XIVCombo offers, and various forks may include even more. All of them are toggleable - you choose only the ones that you actually want, that fit your playstyle - and start out disabled by default, so as not to mess anything up. Install the mod and then look at the config; it's organised by job and each section has checkboxes to control the chain replacements and a little line by each with details.
 
-> :bangbang: **There's an official version of this plugin**, and then _several_ different _unofficial_ versions, ranging from the one I use to one that's about two steps removed from a bot - which I will _not_ be linking here.
+> :bangbang: **There's an official version of this plugin**, and then _several_ different _unofficial_ versions, ranging from the "unofficially official" fork (_XIVCombo Expanded_) to through things that are probably about two steps removed from a bot, and only because they can't move and target things for you. If you feel like it, you can poke around on github and look for various repos and forks, which may also net you some other plugins. Just be careful, because you're literally running foreign code on your own computer and the author can make it do just about anything they want.
 
 ### YesAlready
 
@@ -184,3 +192,4 @@ If you've gotten sick of having to tell the game that yes, you really did mean t
 [custom repo #1]: <https://raw.githubusercontent.com/LeonBlade/DalamudPlugins/main/repo.json>
 [custom repo #2]: <https://github.com/daemitus/MyDalamudPlugins/raw/master/pluginmaster.json>
 [custom repo #3]: <https://raw.githubusercontent.com/Bluefissure/DalamudPlugins/Bluefissure/pluginmaster.json>
+[custom repo #2]: <https://raw.githubusercontent.com/PrincessRTFM/MyDalamudPlugins/master/pluginmaster.json>
