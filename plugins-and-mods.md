@@ -14,7 +14,7 @@ The [ConceptMatrix guide] has been moved to its own article, since it's both com
 
 ## XIVLauncher
 
-In order to use plugins in FFXIV, you'll first need to be using [XIVLauncher], which is a much improved, faster-to-load game launcher that provides in-game plugins. By itself, the launcher is already more convenient than the official one, so even if you don't want to use any plugins at all, I highly recommend it. If you already have
+In order to use plugins in FFXIV, you'll first need to be using [XIVLauncher], which is a much improved, faster-to-load game launcher that provides in-game plugins. By itself, the launcher is already more convenient than the official one, so even if you don't want to use any plugins at all, I highly recommend it. If you already have it, skip ahead to the [plugin setup section](#plugins) instead.
 
 On the download page (linked above) you will need to download and run the `Setup.exe` file to install the launcher. Follow the instructions and go through the installation as normal. Once installed, you may want to replace your normal launcher shortcut for convenient; remember that plugins will _only_ function if the game is run through XIVLauncher!
 
@@ -61,6 +61,7 @@ Here you can configure a few things about Dalamud, the in-game addon and plugin 
 
 <details>
 <summary>My personal recommended settings</summary>
+
 - Flash FFXIV window on duty pop: **ON**
 
 	If you're tabbed out and waiting for the duty finder to match you with a party, the taskbar item for your game window will flash when it's ready.
@@ -107,19 +108,25 @@ Assuming the import was successful, go to the _Installed Mods_ tab. You should s
 
 <details>
 <summary>Mod "metadata" - name, description, etc</summary>
+
 At present, you can't _modify_ any of the metadata - you can't rename it, write your own description, tag what items it affects, things like that. That requires you edit the mod's `meta.json` file in the mod directory, so advanced users might want to do that sort of thing, but it's beyond the scope of this guide. If you're interested, JSON is a fairly easy-to-edit format, and you can find all sorts of tools online to help with it.
 
-If you're curious about editing mod metadata to add descriptions, website links, change item lists, and the like, then you can look at my [Penumbra mod metadata] guide for more details. This guide is just for setting up mods.
+<!--If you're curious about editing mod metadata to add descriptions, website links, change item lists, and the like, then you can look at my [Penumbra mod metadata] guide for more details. This guide is just for setting up mods.-->
+
 </details>
 
 <details>
 <summary>How do Penumbra mods work?</summary>
+
 Mods only affect what the game _loads_. That is to say, toggling or changing settings on a mod will only take effect _after_ the thing that mod changes is loaded. If you put on modded clothing and then turn the mod off, your in-world model won't update until you change gear away and back. Unfortunately, certain elements of the game UI are basically _always_ loaded from login, like the minimap; if you want to mod the UI, you can (and some things may be visible easily) but for that particular case, you might have to relaunch. Gear, minions, mounts, bodies, furnishings, all those kinds of things are affected whenever an instance of them is loaded by the game, so you don't need to relaunch for them.
+
 </details>
 
 <details>
 <summary>Sharing mods</summary>
+
 If you want to share a Penumbra mod, it's arguably easier than a TexTools one. Open the mod directory, find the specific folder of the mod you want to share, put it in a zipfile, and send it to someone. There's no looking through your modded items to select the ones you want to export - just zip, send, done. Importing is obviously the reverse - just put the mod folder into your base mod directory and hit _reload mods_ - or use `/penumbra reload` if you prefer. This _won't_ share any mod-specific settings you selected, mind - that's stored elsewhere.
+
 </details>
 
 
@@ -133,15 +140,18 @@ Step one is to whitelist XIVLauncher in your antivirus. If that doesn't work, so
 
 <details>
 <summary>Whitelisting XIVLauncher in your antivirus</summary>
+
 You'll need to whitelist the following three folders:
 - `%localappdata%\XIVLauncher`
 - `%localappdata%\goatsoft`
 - `%appdata%\XIVLauncher`
 
 To get the exact paths, open up your file browser window, click the address bar, and paste those in. Press enter to go to them, then click the address bar again and copy the new path. Once you've whitelisted those paths, you may need to reinstall the launcher or restart your computer, depending on your antivirus. If things still aren't working, you can join the [XIVLauncher support discord server] and ask for help in the `#xivlauncher_issues` channel.
+
 </details>
 <details>
 <summary>Known and probable interferences, from the support discord</summary>
+
 - RivaTuner/RTSS
 - OBS
 - MSI Afterburner (contains RTSS)
@@ -150,6 +160,7 @@ To get the exact paths, open up your file browser window, click the address bar,
 - Discord (sometimes; depends on how fast it hooks for its overlay - if it hooks _after_ Dalamud then everything works)
 
 If you use any of these, you may have to block them from affecting FFXIV, or delay them so that Dalamud has time to hook the game first.
+
 </details>
 
 ## I have the Dalamud message, but no plugin windows are showing up!
@@ -162,13 +173,17 @@ This is _usually_ due to a "dirty" modpack file. There are two ways to clean the
 
 <details>
 <summary>The good way</summary>
+
 TTMP files are basically zip files with only two files inside them: `TTMPD.mpd` and `TTMPL.mpl`. If you open up the modpack file with something like 7zip or winrar and see any _other_ files (some authors include screenshots in their modpack) you should delete them and try importing again.
 
 This _usually_ happens with "advanced" modpack files that let you choose options when you import them. TexTools lets mod authors include screenshots of the options to help you decide what you want, but Penumbra doesn't understand modpack files with those extra screenshots.
+
 </details>
 <details>
 <summary>The other way</summary>
+
 If that doesn't work, then unfortunately your best bet is to import the mod into TexTools and then re-export it to a new, fresh `.ttmp2` file. This will usually require closing the game, although it's entirely possible to create a _second_ installation specifically for TexTools. Unfortunately, if the modpack file is an advanced one with configuration options, you _won't_ be able to change them live in Penumbra, because TT only imports the options you choose to apply at mod installation, which means the exported modpack file will only have those options in it.
+
 </details>
 
 
