@@ -86,13 +86,9 @@ Prior to Penumbra, mods were installed via _TexTools_, which required that the g
 
 Before you continue though, ask yourself: do you _want_ to install Penumbra? If you don't want to use _mods_ (which make purely visual changes) then you don't need Penumbra, and wouldn't use it anyway. If all you want are _plugins_ (which make mechanical/technical changes or add new features) then you can skip this section and just follow the above two.
 
-Unfortunately, while Penumbra _itself_ doesn't require restarting the game to apply mods, _installing_ Penumbra does - you'll need to shut down when you install or update it, until it's officially released to the plugin browser.
+Penumbra is currently in development and isn't available on the "official" plugin repo yet, but it recently added its own custom third party repository. This is pretty easy to set up, so don't worry. Step one is to open the plugin installer with `/xlplugins`, so get that open. Then click the "settings" button at the bottom, and this time go to the "experimental" tab. Don't worry, this isn't actually experimental. Under the custom repos section, you'll need to paste `https://raw.githubusercontent.com/xivdev/Penumbra/master/repo.json` into the box and click the plus button to add it. Make sure the checkbox under the "enable" column is ticked, then hit the "save and close" button at the bottom.
 
-To start, you'll need to download [Penumbra] as a zip file. On that page, make sure you download `Penumbra.zip` and _not_ one of the source code zipfiles! Open it up and get ready to extract it, but you'll need to put it in a specific place. For that, open up your file browser, click the address bar, and paste `%appdata%\XIVLauncher\devPlugins` into it, then hit enter to go there. You might want to pin this in your quick access section, because you'll be coming back here any time you need to update Penumbra.
-
-This directory is initially empty, and that's fine - normally, it's not actually used. But like I said, Penumbra's still in development. Make a folder here, call it whatever you like - I personally used `Penumbra` for simplicity - and go into it. _This_ is where you need to extract that `Penumbra.zip` file from earlier - just drop all of the files from it right in here. And that's it - you just installed Penumbra. Hooray!
-
-Go ahead and relaunch your game, log in, but don't connect with a character yet - see the little "manage mods" button in the lower right? That's from Penumbra. It'll go away once you log in to a character, but there's a command to open the same interface that button does: `/penumbra` - nice and simple. Either log in and use that command or hit the button now, and you should see something like this.
+Back in the plugin installer, search for the "Penumbra" mod, click on it, and hit the install button. That's all - you now have it installed! Open up the interface with `/penumbra` and you'll be greeted with something like this.
 
 ![Penumbra settings]
 
