@@ -103,18 +103,11 @@ At this point, there are two possibilities: either the mod imported successfully
 Assuming the import was successful, go to the _Installed Mods_ tab. You should see the mod (or mods) that you just imported showing up in the list now - congratulations, they're installed! Click on a mod to see details on the right-side pane. Here, you can toggle it on and off, see whatever description it might have, view a list of what it changes (if provided - imported mods generally don't), the files it affects, any file _conflicts_ it has with other enabled mods, and even the configuration/settings for mods that let you choose elements. It sounds like a lot, but it's really not that bad, I promise!
 
 <details>
-<summary>Mod "metadata" - name, description, etc</summary>
-
-At present, you can't _modify_ any of the metadata - you can't rename it, write your own description, tag what items it affects, things like that. That requires you edit the mod's `meta.json` file in the mod directory, so advanced users might want to do that sort of thing, but it's beyond the scope of this guide. If you're interested, JSON is a fairly easy-to-edit format, and you can find all sorts of tools online to help with it.
-
-<!--If you're curious about editing mod metadata to add descriptions, website links, change item lists, and the like, then you can look at my [Penumbra mod metadata] guide for more details. This guide is just for setting up mods.-->
-
-</details>
-
-<details>
 <summary>How do Penumbra mods work?</summary>
 
 Mods only affect what the game _loads_. That is to say, toggling or changing settings on a mod will only take effect _after_ the thing that mod changes is loaded. If you put on modded clothing and then turn the mod off, your in-world model won't update until you change gear away and back. Unfortunately, certain elements of the game UI are basically _always_ loaded from login, like the minimap; if you want to mod the UI, you can (and some things may be visible easily) but for that particular case, you might have to relaunch. Gear, minions, mounts, bodies, furnishings, all those kinds of things are affected whenever an instance of them is loaded by the game, so you don't need to relaunch for them.
+
+If you've changed things in Penumbra, you can try the `/penumbra redraw` command, which _may_ help. Unfortunately, UI things are not redrawn, so if you install a UI mod, you still have to restart.
 
 </details>
 
