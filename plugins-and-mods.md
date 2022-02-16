@@ -47,7 +47,7 @@ You should now be in the game, at the starting menu. Once the splash screens pas
 
 Now we get to the fun stuff: plugins to affect your game. You can find a more in-depth guide to my personal recommendations and configurations on the [recommended plugins] article, but for this particular guide, I'm going to focus on basics like how to view and install plugins.
 
-To start with, you'll need to run the `/xlplugins` command. It's added by XIVLauncher, and should open a window directly in your game that looks roughly like this. Note that the list of plugins you see will be different - you can hide plugins you don't want _visible_ in your browser list, and also any installed plugins will be moved to the other tab. Furthermore, plugins that only have testing builds won't show up unless you enable them.
+To start with, you'll need to run the `/xlplugins` command, or use the button on the main menu screen, at the upper left. Both of these are added by XIVLauncher, and should open a window directly in your game that looks roughly like this. Note that the list of plugins you see will be different - you can hide plugins you don't want _visible_ in your browser list. Furthermore, plugins that only have testing builds won't show up unless you enable them.
 
 ![Plugin browser]
 
@@ -118,6 +118,23 @@ If you want to share a Penumbra mod, it's arguably easier than a TexTools one. O
 
 </details>
 
+<details>
+<summary>What are mod collections?</summary>
+
+Mod collections are just a list of enabled mods (which you must already have installed) and their settings, if any. Your installed mods list is always the same, but collections remember the enabled/disabled state for each of them and any settings the mod offers, forming a preset of sorts for what's active and how it looks.
+
+There are three "types" of collections: default, forced, and character. By default, without configuring things yourself, there's only one _actual_ collection, and it's assigned as the default one. It's also named "Default" at start, which can be confusing.
+
+The way that collections work is that Penumbra looks at up to two collections when loading something. When Penumbra draws an actor with a specific collection - a player or NPC that has a "character" collection for them - anything that's loaded (models, textures, etc) is looked for first in that character collection. If there's nothing overriding the normal content in there, Penumbra then looks in the "forced" collection. If there's nothing there either, the vanilla content is used.
+
+When Penumbra loads anything that _doesn't_ have a character collection (including things like UI elements), it looks first in the "default" collection (NOT the one _named_ default, the one _marked_ as default!) and then falls back to the forced one.
+
+What this means is that UI mods should be put in either your default or forced collection, anything you want applied to a specific character should be put into a collection that is then assigned as their character collection, anything you want applied _only_ to characters _without_ a specific collection should go in default, and anything that should be applied _universally_ (unless specifically overridden) should be in forced.
+
+If it helps, think of it as loading all mods in the forced collection, then loading (and overriding) everything from either the applicable character collection if one exists, or else the default one.
+
+</details>
+
 
 # Troubleshooting
 
@@ -138,6 +155,7 @@ You'll need to whitelist the following three folders:
 To get the exact paths, open up your file browser window, click the address bar, and paste those in. Press enter to go to them, then click the address bar again and copy the new path. Once you've whitelisted those paths, you may need to reinstall the launcher or restart your computer, depending on your antivirus. If things still aren't working, you can join the [XIVLauncher support discord server] and ask for help in the `#xivlauncher_issues` channel.
 
 </details>
+
 <details>
 <summary>Known and probable interferences, from the support discord</summary>
 
@@ -165,13 +183,16 @@ This is _usually_ due to a "dirty" modpack file. There are two ways to clean the
 
 TTMP files are basically zip files with only two files inside them: `TTMPD.mpd` and `TTMPL.mpl`. If you open up the modpack file with something like 7zip or winrar and see any _other_ files (some authors include screenshots in their modpack) you should delete them and try importing again.
 
-This _usually_ happens with "advanced" modpack files that let you choose options when you import them. TexTools lets mod authors include screenshots of the options to help you decide what you want, but Penumbra doesn't understand modpack files with those extra screenshots.
+This _usually_ happens with "advanced" modpack files that let you choose options when you import them. TexTools lets mod authors include screenshots of the options to help you decide what you want, but Penumbra may have trouble understand modpack files with those extra screenshots.
 
 </details>
+
 <details>
 <summary>The other way</summary>
 
 If that doesn't work, then unfortunately your best bet is to import the mod into TexTools and then re-export it to a new, fresh `.ttmp2` file. This will usually require closing the game, although it's entirely possible to create a _second_ installation specifically for TexTools. Unfortunately, if the modpack file is an advanced one with configuration options, you _won't_ be able to change them live in Penumbra, because TT only imports the options you choose to apply at mod installation, which means the exported modpack file will only have those options in it.
+
+If you have the patience and you're willing to dig around in the guts of the Penumbra mod, you can try exporting every combination of options that you're interested in and manually creating the options in the Penumbra mod, but that's pretty advanced, and I'm not going to go into details about it here.
 
 </details>
 
@@ -193,3 +214,4 @@ If that doesn't work, then unfortunately your best bet is to import the mod into
 [Plugin browser]: <img/plugin-browser.png>
 [Dalamud settings]: <img/dalamud-settings.png>
 [Penumbra settings]: <img/penumbra-settings.png>
+

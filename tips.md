@@ -71,7 +71,7 @@ This _can_ be used for other actions that default to ground-target mode, but rem
 
 ### Enemy Signs
 
-There are fourteen "enemy signs" in the game: target to attack (1-5), target to bind (1-3), target to ignore (1-2), square, cross, circle, and triangle. Despite the name, they can be applied to players as well. Not a whole lot of players I've seen tend to use them, but they can be useful to indicate to your party what needs to be killed first, or what needs to be stunned/bound, or what shouldn't be touched. In larger instances, some players mark tanks/healers to better keep track of them.
+There are fourteen "enemy signs" in the game: target to attack (1-5), target to bind (1-3), target to ignore (1-2), square, cross, circle, and triangle. Despite the name, they can be applied to players as well. Not a whole lot of players I've seen tend to use them, but they can be useful to indicate to your party what needs to be killed first, or what needs to be stunned/bound, or what shouldn't be touched. In larger instances, some players mark tanks/healers to better keep track of them. It's also fairly common to mark a player with the triangle if they know the current duty, so others know to follow their lead. If someone ever says to follow the dorito, that's what they mean.
 
 As it happens, there are [placeholders](#chat-placeholders) for each of those signs. Combined with something like the `/target` command, you can easily make macros to automatically target whatever mob has a given sign. For example:
 

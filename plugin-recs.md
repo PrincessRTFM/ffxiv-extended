@@ -46,6 +46,22 @@ The `/coord` command is very lax. It tries _really_ well to extract coordinates 
 
 Nice and simple, this just shows you what your immediate and average FPS is. It can even show your minimum FPS within the same tracking period for your average, if you want. You can style it (font size, background opacity, text colour...) and place it wherever you want on your screen. You can even use chat commands (`/pfps` with either `show`, `hide`, or `toggle`) to control its visibility, so you can macro them and assign them to a hotbar with a key control.
 
+### Gatherbuddy
+
+A gatherer's best friend indeed, this one will let you search timed MIN/BTN nodes (including filtering to one or the other _and_ by expansion pack!), find out what bait, location, time, weather, and skill you want for fish, set in-game alarms (managed by the plugin) for timed nodes going up, and even provide a weather forecast for the next half-dozen weather changes in the game - for _every_ zone.
+
+On top of that, the `/gather` command takes a partial item name, finds the best match, and tells you about it - along with, optionally, applying the relevant gearset, starting a teleport to the nearest aetheryte, and opening your map, complete with a pinned location. There's also `/gathermin` and `/gatherbtn` for items that can be gathered by either, to force only looking at one type of node.
+
+And finally, if you've got GP to burn, there's `/gathergroup` for things like "find whatever node is currently up that'll give me white scrips", including again the ability to limit it to only MIN or BTN nodes.
+
+### Glamaholic
+
+No, sorry, you can't save more than fifteen glamour plates in the game. That's on SE, plugins can't help. What plugins _can_ do, and what this particular plugin _does_, is save your glamour plates (and let you create them more easily) so that you can effectively backup, create, edit, and then restore/load plates into the _actual_ glamour plate set.
+
+This plugin lets you create a glamour plate with a much nicer editor, including even a feature to look for gear that shares the same model (in case you have something you want but that's hard to get). You can name and even tag your plugin-saved plates to search through them later, because there's _no_ limit - and you can even create a plate directly from an examine window, to copy someone's look, if you want.
+
+You can instantly try on the entire plate at once in the fitting room, just like the [_Item Search_](#item-search) plugin used to do, but you can also "apply" the plate when you have the in-game plate editor open, which will replace it with the items from the plugin's list. Finally, you can _share_ plates too, by copying a chunk of JSON describing the items in it, which someone else can then import to make a Glamaholic plate that's a copy of yours.
+
 ### Globetrotter
 
 A treasure hunter's _best_ friend - when you decipher a map or use the `/tmap` command with one in your inventory, Globetrotter will open your game map and place a flag where the treasure is located. Just like that. No more searching and squinting, no more wondering if the map matches that site or you're just seeing things, no more trying to recognise tiny fragments of maps... Globetrotter will tell you _exactly_ where to go.
@@ -58,7 +74,7 @@ Have you ever been in an instance and an orchestrion roll comes up in the loot a
 
 A catalog of _every item in the game_ - searchable, filterable, and with options like linking it in your local chatlog (as an `/echo` type message - you can right-click -> `Link` for sending messages or hit `Try on` for gear!) or looking it up on garland tools or teamcraft. If you also have the [_Market Board_](#market-board) plugin (see below) you can look up the item directly from the catalog!
 
-On top of that, it comes with a "fitting room" feature that lets you save outfits from the "try on" window, open that window with the `/fittingroom` command, and load your saved outfits into the window.
+If you're looking for the previous feature of saving outfit sets in the fitting room, don't worry. The fitting room itself is still here, but the outfits have been removed in favour of the more extensive [_Glamaholic_](#glamaholic) plugin.
 
 <details>
 <summary>Filters</summary>
@@ -85,6 +101,14 @@ Macro Chain adds two commands: `/runmacro <macro#> {individual|shared}` and `/ne
 
 The `/nextmacro` command _only_ works from within a macro, and it immediately jumps to the first line of the _next_ macro. For example, if your macro #1 ends with `/nextmacro`, then executing that macro will also execute macro #2. This lets you make macros longer than 15 lines, technically speaking. For an alternative that's more powerful but also more complex, check out [_Macrology_](#macrology).
 
+### Macrology
+
+> :exclamation: **Requires [custom repo #4]**
+
+This is basically an entire macro implementation, external to the game's macro system. Technically, this means that you can't use macro-only commands in Macrology macros, but it also means you _can_ use macro-forbidden commands in them. The major benefits are that Macrology macros have no length limit and run in parallel, so you can have more than one going at a time. On top of that, you can make a macro loop infinitely, although there's still no flow control, so you can't make it loop _conditionally_. You'll need to have a way to use the plugin's cancel-macro command (and the builtin `/macrocancel` won't work, since these are totally separate from the game's macros).
+
+One other nice improvement is that Macrology allows fractional waits, which XIV macros don't support. You can manage the timing of your commands with some decent precision, and combining that with the lack of length limit means that you can make a whole procession out of a single macro!
+
 ### Market Board
 
 Mentioned briefly in the [_Item Search_](#item-search) plugin above, this plugin provides an on-demand window to search the player markets. You can search by name and filter by all of the standard market categories, but you can't access your favourites or wish list - because it's not looking up the game markets directly from your character. The thing is, it _can't_ do that - there's no way to access that except through an in-game marketboard activator.
@@ -93,17 +117,31 @@ There's a service called _Universalis_ that tracks marketboard prices for items,
 
 Unfortunately, since not everyone uses these tools, sometimes the data ends up out of date. If you want to force it to update for a specific item, you can go look at its prices yourself to send that data to Universalis. Try to convince your friends to use XIVLauncher if you can; the more people who do, the better the data will be!
 
+### MOAction
+
+Macro-style targeting of actions, without the macros - or the downsides they involve. If you've never heard of macro-targeting, it's when you make a macro to execute an action via the `/action` command, using various placeholders to create a priority list of targets. This would let you have a single button that attempts to use an action on your current target, and if that fails then use it on your target's target, for example. The problem is that macros don't queue like actions do, so you lose time on them.
+
+MOAction lets you define a series of things to try when you use a specific action. The most basic use is to just try a handful of different targets on that same action, but you _can_ define an entry in that list to use a totally different action, if you want. MOAction will go down the list when you use the "initial" action and find the first entry that's valid, then use that.
+
+Included in the targets list are both UI mouseover _and_ field mouseover, which means that as a healer, you can make your heal spells automatically target the player you're mousing over, and if there isn't one, then fall back to your target.
+
 ### No Kill
 
-> :exclamation: **Requires [custom repo #3]**
-
 Very simple and absolutely an install-and-forget plugin. When you launch the game and try to connect to your data centre, the game terminates if that connection fails for any reason. That can be pretty annoying if the issue was only a temporary hiccup in your connection, so this plugin just stops it from doing that. If the game fails to connect to the server, it'll just stay open so you can retry, instead of making you launch it again - which is especially annoying with one-time passwords.
+
+### No Tank You
+
+A simple and hard-to-miss visual display of who's screwing up their job. NTY will show a warning if you or your party (configurable) is missing an important skill, like Sage's Kardion, Dancer's Dance Partner, or any tank's tank stance. Good for learning or helping others learn. You can even make it show warnings for the Well Fed buff to remind you to eat, although those only apply in areas that are specifically listed by the user.
 
 ### No Soliciting
 
 An absolute _essential_, this plugin blocks RMT, FC ads, RP ads, phishing, and all sorts of related crap from both chat _and_ the party finder window. You can choose what categories of stuff to block and define your own filters too (for text matches and regex patterns both) in order to remove even _system_ messages. No FF, I _don't_ want you telling me every time I enter or leave a damn sanctuary.
 
 Once installed, just run `/nosol` to open the configuration. It should be fairly self-explanatory.
+
+### Orchestrion
+
+Especially with Endwalker, sometimes you really want to know what music is being played. Orchestrion will not only show the current track title in your server info bar, it'll let you force a specific track to be played, show you a list of recently played tracks, and allow you to replace tracks with others.
 
 ### Ping Plugin
 
@@ -138,6 +176,10 @@ It might sound like you could just use the [_Market Board_](#market-board) plugi
 
 If you're like me, you never have enough hotbar space for all the things you'd like to put there. Especially if you also like to use custom macros to make slash commands accessible via easy buttons. This plugin will be your saving grace: it lets you define and add new hotbars, positioned anywhere you want, with buttons to run slash commands - and you can even make categories for submenus. Oh, and assign hotkeys too.
 
+### Quest Map
+
+If you've ever had to tab out of the game to look up questlines, or what quest you need to do to unlock some instance, or just where the quest starts, this plugin does all of that and more. You can search for quests by their name or rewards, including the duty/duties they unlock, and get an interactive map of the questlines involved - what's required for the one you want, and what it unlocks. Each of those quests can be clicked on in the map to see information about it, including a button to mark it on the map (which fails for instanced areas like the Waking Sands, unfortunately) and open it in your journal (if it's present, which means accepted or completed).
+
 ### Simple Tweaks
 
 The title here is a _blatant_ lie, but it's a collection of minor-enough-to-not-need-their-own-plugin tweaks, so... close enough, I suppose? Featuring such QoL improvements as clickable chat links, disabling the title screen's idle movie, and a _wide_ assortment of UI and item-tooltip improvements, not to mention _custom chatbox command aliases_ (pretty convenient with MacroRecursion...!) this plugin does too much to describe, but I promise you'll find some useful things. Possibly my number one favourite, honestly!
@@ -166,9 +208,9 @@ If you do a lot of instances (dungeons, trials, raids, etc) that you use waymark
 
 ### XIVCombo (Expanded)
 
-> :exclamation: **Requires [custom repo #2]** _(for the expanded version)_
+> :exclamation: **Requires [custom repo #4]** _(for the expanded version)_
 
-> :exclamation: **Requires [custom repo #4]** _(for the very expanded version)_
+> :exclamation: **Requires [custom repo #8]** _(for the very expanded version)_
 
 You probably know about _skill chains_ in XIV - certain skills get _combos_ when used after others, which make them do more damage or add an extra effect. Generally, you want to follow the chain. For example, if you play Machinist, you want to use (heated) split shot, then follow it with (heated) slug shot, then finish the chain with (heated) clean shot. If you use plain Slug Shot _without_ first using (heated) split shot, you do 100 potency of damage. If you follow the chain, you do _260_ potency of damage instead, just with that skill - nevermind what (heated) split shot does first.
 
@@ -182,14 +224,24 @@ There are a fair number of these button-replacement chains that XIVCombo offers,
 
 ### YesAlready
 
-> :exclamation: **Requires [custom repo #2]**
+> :exclamation: **Requires [custom repo #4]**
 
 If you've gotten sick of having to tell the game that yes, you really did mean to click that, you're sure, you just want to do the thing, will it shut up and do what you told it to already, then this plugin might just save your sanity. Not only can you select categories of confirmation boxes to auto-confirm, you can even use plain-text _and_ regex matching for all of the popups. The plugin even recognises when there's a confirmation checkbox to be ticked as well as hitting the button, and takes care of that for you too! Finally, you can extract materia from things without the game bugging you for _every single item_ to be _extra_ sure.
 
+Recently, support was even added for lists - you know, where you get presented with two or more options and click one of the lines? A surprising number of those are basically just yes-or-no boxes except with flavour text instead of simple "yes" and "no" options. Those are fully supported (so you can skip straight through the "do you want to retire to an inn room?" prompts) as well as longer lists.
+
+There's even now support for skipping _dialogue_ based on the NPC in question, although you'll want to be careful with that one. But if you set it up right, it'll now take only one click to get into your inn room in any zone you want!
 
 
-[Webhook]: <https://github.com/adnanh/webhook/> "Define custom webhooks to invoke other programs, passing data directly through - available for windows and linux, can be compiled from source"
+
+[webhook]: <https://github.com/adnanh/webhook/> "Define custom webhooks to invoke other programs, passing data directly through - available for windows and linux, can be compiled from source"
 [custom repo #1]: <https://raw.githubusercontent.com/LeonBlade/DalamudPlugins/main/repo.json>
-[custom repo #2]: <https://github.com/daemitus/MyDalamudPlugins/raw/master/pluginmaster.json>
-[custom repo #3]: <https://raw.githubusercontent.com/Bluefissure/DalamudPlugins/Bluefissure/pluginmaster.json>
-[custom repo #2]: <https://raw.githubusercontent.com/PrincessRTFM/MyDalamudPlugins/master/pluginmaster.json>
+[custom repo #2]: <https://plugins.annaclemens.io/>
+[custom repo #3]: <https://plugins.annaclemens.io/unofficial>
+[custom repo #4]: <https://github.com/daemitus/MyDalamudPlugins/raw/master/pluginmaster.json>
+[custom repo #5]: <https://raw.githubusercontent.com/Bluefissure/DalamudPlugins/Bluefissure/pluginmaster.json>
+[custom repo #6]: <https://raw.githubusercontent.com/SaltyCog/DalamudPlugins/main/repo.json>
+[custom repo #7]: <https://raw.githubusercontent.com/maributt/xivplugins/main/repo.json>
+[custom repo #8]: <https://raw.githubusercontent.com/PrincessRTFM/MyDalamudPlugins/master/pluginmaster.json>
+[custom repo #9]: <https://raw.githubusercontent.com/xivdev/Penumbra/master/repo.json>
+[custom repo #10]: <https://repo.waitingway.com/>
