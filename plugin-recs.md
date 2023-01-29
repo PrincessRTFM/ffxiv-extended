@@ -201,7 +201,7 @@ The `/nextmacro` command _only_ works from within a macro, and it immediately ju
 
 > :exclamation: **Requires [custom repo #15]**
 
-The plugin of every modder's dreams: pair with a friend (via plugin-specific means with a personal ID code) and then you and that friend will see each other's characters as you see yourselves. Mare only works with _[Penumbra]_ so you'll need that as well, but you should be using that for mods already anyway. It also features compatibility for _[Glamourer]_, _[Customise+], and the _[Heels Plugin]_ to share customisations made to your character through those plugins, but the core of it is that any Penumbra mods that apply to _your character_ will send the minimum necessary files to paired Mare users in order to recreate your _precise_ look for other people. No more sharing of whole entire mods, messing with collections and settings, and worrying about sharing private or paid mods - just register on Mare's discord, swap your pairing codes, and that's it. You're good to go.
+The plugin of every modder's dreams: pair with a friend (via plugin-specific means with a personal ID code) and then you and that friend will see each other's characters as you see yourselves. Mare only works with _[Penumbra]_ so you'll need that as well, but you should be using that for mods already anyway. It also features compatibility for _[Glamourer]_, _[Customise+]_, and the _[Heels Plugin]_ to share customisations made to your character through those plugins, but the core of it is that any Penumbra mods that apply to _your character_ will send the minimum necessary files to paired Mare users in order to recreate your _precise_ look for other people. No more sharing of whole entire mods, messing with collections and settings, and worrying about sharing private or paid mods - just register on Mare's discord, swap your pairing codes, and that's it. You're good to go.
 
 ### Market Board
 
@@ -424,7 +424,7 @@ There's even now support for skipping _dialogue_ based on the NPC in question, a
 [Mare Synchronos]: <#mare-synchronos>
 [Penumbra]: <#penumbra>
 [Glamourer]: <#glamourer>
-[Customise+]: <#customise>
+[Customise+]: <#customize>
 [Heels Plugin]: <#heels-plugin>
 [custom repo #1]: <https://raw.githubusercontent.com/LeonBlade/DalamudPlugins/main/repo.json>
 [custom repo #2]: <https://plugins.annaclemens.io/>
