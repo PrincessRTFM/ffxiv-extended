@@ -10,7 +10,6 @@ At the time of this writing, these guides are still being written. However, even
 
 - [Setting up XIVLauncher, in-game plugins, and texture mods with Penumbra](/plugins-and-mods.md)
 - [My personal plugin recommendations](/plugin-recs.md)
-- [ConceptMatrix and posing](/cmtool.md) (INCOMPLETE, PROBABLY OUTDATED)
 
 There's also a new section that's not actually about any third-party tools at all, just things in the game itself that are poorly (or, more often, _not_) explained.
 - [Things XIV doesn't tell you](/tips.md)

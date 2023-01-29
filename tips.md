@@ -44,6 +44,14 @@ If you've played for any appreciable length of time, you probably know that tele
 
 But if you're in a party and you teleport, then all party members in the same map zone who have also unlocked the aetheryte you go to will be offered a _free_ ride-along teleport. There's no fee for anyone, not you and not them, and it doesn't expire. If they change zones, it's lost, but otherwise they can teleport there for free half an hour after you, if they were busy. And still want to go there half an hour later for some reason.
 
+### Action Queueing
+
+You already know (or at least I _hope_ you do) about action cooldowns, and you've probably figured out the global cooldown system. Spells and weaponskills are on your GCD, abilities aren't (which is called off-GCD or oGCD). Unless the action tip says otherwise, anyway.
+
+What you might _not_ know is that if you click an action button within _one half second_ of it coming off cooldown, the game _queues_ that action for use as soon as the cooldown is up - and that's actually sent to the server, which means it's not (as) affected by your latency.
+
+In other words, click your action half a second before they're off cooldown and you'll use it IMMEDIATELY as soon as it's available, which increases your DPS. This is _critical_ in higher-end content, in fact, because that adds up.
+
 ### Action Macros
 
 Never use macros for combat actions, because
