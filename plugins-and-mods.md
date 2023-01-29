@@ -82,6 +82,8 @@ Now, this guide is only about the basics, but it's also about installing _Penumb
 
 ## Penumbra
 
+> :exclamation: **This section is outdated!** Some details may no longer be accurate, although the general information is overall still correct.
+
 Prior to Penumbra, mods were installed via _TexTools_, which required that the game be shut down so it could replace files on disk. Penumbra, on the other hand, applies the edits to the game's _memory_, allowing it to load, activate, change, and disable mods on-the-fly. The catch is that Penumbra's still in development, so it's not yet available on the plugin browser. But don't worry, I'll walk you through installing it here.
 
 Before you continue though, ask yourself: do you _want_ to install Penumbra? If you don't want to use _mods_ (which make purely visual changes) then you don't need Penumbra, and wouldn't use it anyway. If all you want are _plugins_ (which make mechanical/technical changes or add new features) then you can skip this section and just follow the above two.
