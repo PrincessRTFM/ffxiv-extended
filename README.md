@@ -40,3 +40,8 @@ Same as above: let me know and I'll see what I can do to fix it.
 
 Probably! Let me know what you're looking for and I'll see what I can do.
 
+## How much work did all this take?
+
+More that is visible, given changes and rewrites and fixing up outdated details. Feel like helping a girl out?
+
+[![Support me!](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/V7V7IK9UU)
